@@ -4,27 +4,28 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
+const renderCard = require("./lib/generateFile");
 
 Employee.prototype.printCard = function () {
     console.log(
         `Name: ${this.name}\n ID: ${this.ID}\n `
-      )
-}
-
-// Function to write HTMLfile
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err) : console.log("Sucess!")
-    );
-  };
+        )
+    }
+    
+    // Function to write HTML file
+    function writeToFile(fileName, data) {
+        fs.writeFile(fileName, data, (err) =>
+        err ? console.log(err) : console.log("Sucess!")
+        );
+      };
 
 function init() {
     inquirer
-      .prompt([
+    .prompt([
         {
-          type: "input",
-          name: "name",
-          message: "What is the name of the Employee?",
+            type: "input",
+            name: "name",
+            message: "What is the name of the Employee?",
         },
         {
             type: "list",
@@ -40,23 +41,24 @@ function init() {
             type: "input",
             name: "github",
             message: "What is the Employee's github?",
-          },
+        },
         {
             type: "input",
             name: "email",
             message: "What is the Employee's email?",
-          },
-        ])
-          .then((answers) => {
-            console.log(answers);
-            // const data = generateMarkdown(answers);
-            // writeToFile('./dist/README.md', data);
-          }).catch((error) => {
-            if (error) {
-              console.log(error);
-            }
-          });
-      };
+        },
+    ])
+    .then((answers) => {
+        console.log(answers);
+        const data = renderCard(answers);
+        writeToFile('./dist/index.html', data);
+    }).catch((error) => {
+        if (error) {
+            console.log(error);
+        }
+    });
+};
 
-// Function call to initialize app
+
+// Function call to initialize CLI
 init();
