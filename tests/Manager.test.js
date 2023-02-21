@@ -16,3 +16,12 @@ test("name can be set using a constructor", () => {
   const employee = new Manager("Katie", 1, "test@gmail.com",8675309); 
   expect(employee.officeNumber).toBe(8675309);
 });
+
+test("getRole method test", () => {
+    const employee = new Manager("Katie", 1, "test@gmail.com",8675309); 
+    expect(employee.getRole()).toBe("Manager");
+  });
+test("getOfficeNumber method test", () => {
+    const employee = new Manager("Katie", 1, "test@gmail.com",8675309); 
+    expect(employee.getOfficeNumber()).toBe(8675309);
+  });
