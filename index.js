@@ -51,6 +51,7 @@ function init() {
     .then((answers) => {
         console.log(answers);
         const data = renderCard(answers);
+        console.log(data);
         writeToFile('./dist/index.html', data);
     }).catch((error) => {
         if (error) {
