@@ -41,8 +41,14 @@ function init() {
         {
             type: "input",
             name: "github",
-            message: "What is the Employee's github?",
+            message: "What is the Engineer's github?",
             when: (answers) => answers.role === "Engineer"
+        },
+        {
+            type: "input",
+            name: "number",
+            message: "What is the Manager's office phone number?",
+            when: (answers) => answers.role === "Manager"
         },
         {
             type: "input",
@@ -98,7 +104,6 @@ function createTeam(){
             ]
         }
     ]
-
     ).then((answers) => {
         if(answers.end === "Yes, add another team member."){
             init()
