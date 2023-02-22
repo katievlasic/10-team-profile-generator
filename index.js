@@ -6,11 +6,7 @@ const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 const renderCard = require("./lib/generateFile");
 
-Employee.prototype.printCard = function () {
-    console.log(
-        `Name: ${this.name}\n ID: ${this.ID}\n `
-        )
-    }
+let varGlobal = [];
     
     // Function to write HTML file
     function writeToFile(fileName, data) {
@@ -28,6 +24,11 @@ function init() {
             message: "What is the name of the Employee?",
         },
         {
+            type: "input",
+            name: "id",
+            message: "What is the id of this Employee?",
+        },
+        {
             type: "list",
             name: "role",
             message: "What is the role of this Employee?",
@@ -41,6 +42,13 @@ function init() {
             type: "input",
             name: "github",
             message: "What is the Employee's github?",
+            when: (answers) => answers.role === "Engineer"
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "What is the Intern's school?",
+            when: (answers) => answers.role === "Intern"
         },
         {
             type: "input",
@@ -50,9 +58,22 @@ function init() {
     ])
     .then((answers) => {
         console.log(answers);
-        const data = renderCard(answers);
-        console.log(data);
-        writeToFile('./dist/index.html', data);
+        if (answers.role === "Manager"){
+            let varMan = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
+            varGlobal.push(varMan); 
+    
+        }
+        else if (answers.role === "Engineer"){
+            let varEn = new Engineer(answers.name, answers.id, answers.email, answers.github);
+            varGlobal.push(varEn); 
+    
+        }
+        else if (answers.role === "Intern"){
+            let varIn = new Intern(answers.name, answers.id, answers.email, answers.school);
+            varGlobal.push(varIn); 
+    
+        };
+        createTeam();
     }).catch((error) => {
         if (error) {
             console.log(error);
@@ -63,3 +84,28 @@ function init() {
 
 // Function call to initialize CLI
 init();
+
+
+function createTeam(){
+    inquirer.prompt([
+        {
+            type: "list",
+            name: "end",
+            message: "Do you want to add another team member?",
+            choices: [
+                "Yes, add another team member.",
+                "No, build team profile."
+            ]
+        }
+    ]
+
+    ).then((answers) => {
+        if(answers.end === "Yes, add another team member."){
+            init()
+        } else {
+            const data = renderCard(varGlobal); // hand off array of team members 
+            console.log(data);
+            writeToFile('./dist/index.html', data);
+        }
+    });
+}

@@ -2,6 +2,8 @@
 
 ## Description 
 
+super descriptive of what it is and contains (more important including classes, and can add bullets for potential recruiters!)
+
 ## Table of Contents 
  
  * [Installation](#installation) 
@@ -25,4 +27,10 @@ It is possible to add custom scripts in package.json!
 
 ## Usage 
 
+Details on what the specifics are!
+
 ## Tests
+
+Describe to user what to do when they open and run the application.... 
+
+exact steps of how to run, where to look, what to type in the terminal
