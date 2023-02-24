@@ -33,6 +33,8 @@ For your team of employess, each employee entered will display in a card format 
 
 ![Team Example Preview](./src/previewTeam.jpg)
 
+Please access a walkthrough of using the CLI [here](https://drive.google.com/file/d/13GJdMFl2hhUEa0LqZFPJjaeXItlGgwxY/view).
+
 ## Tests
 
 The Pacakge.json will list dependencies that the command npm i has installed. Node modules is needed to work out of the file name package.json.
