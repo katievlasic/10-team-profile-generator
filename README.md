@@ -12,6 +12,8 @@ This CLI application allows a user to build a team of employees based on three r
 
 Once the user has completed the CLI application, a custome .html file will be generated.
 
+Please access a walkthrough of using the CLI [here](https://drive.google.com/file/d/1EiWNavpUVtQKJz-PTGcbZnGboyDnb75F/view).
+
 ## Table of Contents 
  
  * [Installation](#installation) 
@@ -32,8 +34,6 @@ Once the user has completed the CLI application, a custome .html file will be ge
 For your team of employess, each employee entered will display in a card format on the website. Critical information entered by the user in the CLI application will be displayed next to the employee's role (including the name entered).
 
 ![Team Example Preview](./src/previewTeam.jpg)
-
-Please access a walkthrough of using the CLI [here](https://drive.google.com/file/d/13GJdMFl2hhUEa0LqZFPJjaeXItlGgwxY/view).
 
 ## Tests
 

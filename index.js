@@ -46,7 +46,7 @@ function init() {
         },
         {
             type: "input",
-            name: "number",
+            name: "officeNumber",
             message: "What is the Manager's office phone number?",
             when: (answers) => answers.role === "Manager"
         },
