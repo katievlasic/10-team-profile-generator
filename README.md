@@ -2,7 +2,15 @@
 
 ## Description 
 
-super descriptive of what it is and contains (more important including classes, and can add bullets for potential recruiters!)
+This CLI application allows a user to build a team of employees based on three roles: Manager, Engineer, and Intern. Each employee will have a Name, Id, and Email assigned to them. The Manager has an option to include an office number. The Engineer has an option to include their github username. The Intern has an option to include their school name. This application includes the following object oriented programming (OOP) features:
+- Classes
+    - Parent Class extends to other classes
+    - Constructors
+    - Methods
+- Module.exports between JS files
+- Tests using Jest
+
+Once the user has completed the CLI application, a custome .html file will be generated.
 
 ## Table of Contents 
  
@@ -27,7 +35,7 @@ It is possible to add custom scripts in package.json!
 
 ## Usage 
 
-Details on what the specifics are!
+Details on what the specifics are! Inquirer, Node modules, and Jest are used.
 
 ## Tests
 
