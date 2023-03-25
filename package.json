@@ -1,0 +1,28 @@
+{
+  "name": "10-team-profile-generator",
+  "version": "1.0.0",
+  "description": "This CLI application allows a user to build a team of employees based on three roles: Manager, Engineer, and Intern. Each employee will have a Name, Id, and Email assigned to them. The Manager has an option to include an office number. The Engineer has an option to include their github username. The Intern has an option to include their school name. This application includes the following object oriented programming (OOP) features:\r - Classes\r     - Parent Class extends to other classes\r     - Constructors\r     - Methods\r - Module.exports between JS files\r - Tests using Jest",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/katievlasic/10-team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/katievlasic/10-team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/katievlasic/10-team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest": "^29.5.0"
+  }
+}

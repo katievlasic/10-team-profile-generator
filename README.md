@@ -25,8 +25,10 @@ Please access a walkthrough of using the CLI [here](https://drive.google.com/fil
 ## Installation
 
 1. Go to root directory
-2. Type 'npm i' in the terminal (install node modules)
-3. Type either 'node index.js' or 'npm start' to begin the CLI application
+2. Type `npm init -y` in the terminal 
+3. Type `npm install --save jest`
+3. Type `npm i inquirer@8.2.4`
+3. Type `node index.js` to begin the CLI application
 4. Access the custom index.html file containing the user inputs in /dist/index.html
 
 ## Usage 
